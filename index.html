@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form id="survey-form">
+    <h1 id="title">Online Learning Survey</h1>
+    <p id="description" ;">Please fill out this survey to share your experience with online learning platforms</p>
+
+    <label id="name-label" for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label id="email-label" for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label id="number-label" for="age">Age</label>
+    <input type="number" id="number" placeholder="Enter your age" min="10" max="100">
+
+    <label>How often do you use online learning platforms?</label>
+    <input type="radio" name="online" value="daily"> Daily <br>
+    <input type="radio" name="online" value="weekly"> Weekly <br>
+    <input type="radio" name="online" value="monthly"> Monthly <br>
+    <input type="radio" name="online" value="rarely"> Rarely <br>
+
+    <label>What is your favorite feature of online learning platforms? (Select all that apply)</label>
+    <input type="checkbox" value="Flexibility"> Flexibility <br>
+    <input type="checkbox" value="Affordable cost"> Affordable cost <br>
+    <input type="checkbox" value="Wide variety of courses"> Wide variety of courses <br>
+    <input type="checkbox" value="Certificates of completion"> Certificates of completion <br>
+
+    <label>What is the biggest challenge you face with online learning? (Select all that apply)</label>
+    <input type="checkbox" value="Lack of motivation"> Lack of motivation <br>
+    <input type="checkbox" value="Internet connection issues"> Internet connection issues <br>
+    <input type="checkbox" value="High course prices"> High course prices <br>
+    <input type="checkbox" value="Other"> Other <br>
+
+    <label for="dropdown">Favorite online platforms</label>
+    <select id="dropdown">
+      <option value="">Select one</option>
+      <option value="Free">Free programming platforms</option>
+      <option value="Paid">Paid course platforms</option>
+      <option value="Academic">Academic/university online courses</option>
+      <option value="YouTube">YouTube tutorials</option>
+    </select>
+
+    <label for="comments">Any comments?</label>
+    <textarea id="comments" rows="5" placeholder="Write here..."></textarea>
+
+    <button id="submit" type="submit">Submit</button>
+  </form>
