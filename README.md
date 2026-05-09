@@ -1,16 +1,17 @@
 # Survey Form
 
-A responsive survey form built using HTML and CSS.
+A responsive survey form built using HTML ,CSS and js
 This project is part of my web development practice to improve my front-end skills.
 
 ## Live Demo
 
-https://rawankhaled276.github.io/survey-form/
+https://surveyformwebsite.netlify.app/
 
 ## Technologies Used
 
 * HTML5
 * CSS3
+* js
 
 ## Features
 
@@ -23,6 +24,10 @@ https://rawankhaled276.github.io/survey-form/
 * Building forms using HTML
 * Styling forms with CSS
 * Creating responsive layouts
+* Handling user input using JavaScript
+* Form validation (checking required fields and correct data)
+* DOM manipulation (showing errors and success messages dynamically)
+* Adding interactivity such as reset and real-time feedback (character counter)
 
 ## Author
 
