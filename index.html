@@ -8,48 +8,115 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <form id="survey-form">
-    <h1 id="title">Online Learning Survey</h1>
-    <p id="description" ;">Please fill out this survey to share your experience with online learning platforms</p>
 
-    <label id="name-label" for="name">Full Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
+  <div class="card-wrapper">
+    <form id="survey-form" novalidate>
 
-    <label id="email-label" for="email">Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
+      <div class="form-header">
+        <span class="badge">Survey 2025</span>
+        <h1 id="title">Online Learning Survey</h1>
+        <p id="description">Share your experience with online learning platforms and help us improve education for
+          everyone.</p>
+      </div>
 
-    <label id="number-label" for="age">Age</label>
-    <input type="number" id="number" placeholder="Enter your age" min="10" max="100">
+      <!-- Name -->
+      <div class="field-group" id="group-name">
+        <label id="name-label" for="name">Full Name <span class="req">*</span></label>
+        <input type="text" id="name" placeholder="e.g. Rawan Khaled" autocomplete="off">
+        <div class="error-msg" id="err-name">⚠ Please enter your full name.</div>
+      </div>
 
-    <label>How often do you use online learning platforms?</label>
-    <input type="radio" name="online" value="daily"> Daily <br>
-    <input type="radio" name="online" value="weekly"> Weekly <br>
-    <input type="radio" name="online" value="monthly"> Monthly <br>
-    <input type="radio" name="online" value="rarely"> Rarely <br>
+      <!-- Email -->
+      <div class="field-group" id="group-email">
+        <label id="email-label" for="email">Email Address <span class="req">*</span></label>
+        <input type="email" id="email" placeholder="e.g. rawan@example.com" autocomplete="off">
+        <div class="error-msg" id="err-email">⚠ Please enter a valid email address.</div>
+      </div>
 
-    <label>What is your favorite feature of online learning platforms? (Select all that apply)</label>
-    <input type="checkbox" value="Flexibility"> Flexibility <br>
-    <input type="checkbox" value="Affordable cost"> Affordable cost <br>
-    <input type="checkbox" value="Wide variety of courses"> Wide variety of courses <br>
-    <input type="checkbox" value="Certificates of completion"> Certificates of completion <br>
+      <!-- Age -->
+      <div class="field-group" id="group-age">
+        <label id="number-label" for="age">Age <span class="req">*</span></label>
+        <input type="number" id="age" placeholder="e.g. 24" min="10" max="100">
+        <div class="error-msg" id="err-age">⚠ Please enter a valid age (10–100).</div>
+      </div>
 
-    <label>What is the biggest challenge you face with online learning? (Select all that apply)</label>
-    <input type="checkbox" value="Lack of motivation"> Lack of motivation <br>
-    <input type="checkbox" value="Internet connection issues"> Internet connection issues <br>
-    <input type="checkbox" value="High course prices"> High course prices <br>
-    <input type="checkbox" value="Other"> Other <br>
+      <!-- Frequency -->
+      <div class="field-group" id="group-freq">
+        <label>How often do you use online learning platforms? <span class="req">*</span></label>
+        <div class="radio-grid">
+          <label class="radio-chip"><input type="radio" name="online" value="daily"> Daily</label>
+          <label class="radio-chip"><input type="radio" name="online" value="weekly"> Weekly</label>
+          <label class="radio-chip"><input type="radio" name="online" value="monthly"> Monthly</label>
+          <label class="radio-chip"><input type="radio" name="online" value="rarely"> Rarely</label>
+        </div>
+        <div class="error-msg" id="err-freq">⚠ Please select how often you use these platforms.</div>
+      </div>
 
-    <label for="dropdown">Favorite online platforms</label>
-    <select id="dropdown">
-      <option value="">Select one</option>
-      <option value="Free">Free programming platforms</option>
-      <option value="Paid">Paid course platforms</option>
-      <option value="Academic">Academic/university online courses</option>
-      <option value="YouTube">YouTube tutorials</option>
-    </select>
+      <!-- Favorite Features -->
+      <div class="field-group">
+        <label>Favorite features of online learning? <span class="hint">(select all that apply)</span></label>
+        <div class="check-grid">
+          <label class="check-chip"><input type="checkbox" value="Flexibility"> Flexibility</label>
+          <label class="check-chip"><input type="checkbox" value="Affordable cost"> Affordable cost</label>
+          <label class="check-chip"><input type="checkbox" value="Wide variety"> Wide variety</label>
+          <label class="check-chip"><input type="checkbox" value="Certificates"> Certificates</label>
+        </div>
+      </div>
 
-    <label for="comments">Any comments?</label>
-    <textarea id="comments" rows="5" placeholder="Write here..."></textarea>
+      <!-- Challenges -->
+      <div class="field-group">
+        <label>Biggest challenges you face? <span class="hint">(select all that apply)</span></label>
+        <div class="check-grid">
+          <label class="check-chip"><input type="checkbox" value="Lack of motivation"> Lack of motivation</label>
+          <label class="check-chip"><input type="checkbox" value="Internet issues"> Internet issues</label>
+          <label class="check-chip"><input type="checkbox" value="High prices"> High prices</label>
+          <label class="check-chip"><input type="checkbox" value="Other"> Other</label>
+        </div>
+      </div>
 
-    <button id="submit" type="submit">Submit</button>
-  </form>
+      <!-- Dropdown -->
+      <div class="field-group">
+        <label for="dropdown">Favorite Platform Type</label>
+        <select id="dropdown">
+          <option value="">Select one</option>
+          <option value="Free">Free programming platforms</option>
+          <option value="Paid">Paid course platforms</option>
+          <option value="Academic">Academic / university courses</option>
+          <option value="YouTube">YouTube tutorials</option>
+        </select>
+      </div>
+
+      <!-- Comments -->
+      <div class="field-group" id="group-comments">
+        <label for="comments">
+          Any additional comments?
+          <span class="char-counter" id="char-counter">0 / 300</span>
+        </label>
+        <textarea id="comments" rows="5" placeholder="Share your thoughts here…" maxlength="300"></textarea>
+        <div class="char-bar">
+          <div class="char-fill" id="char-fill"></div>
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div class="success-msg" id="success-msg">
+        <span class="success-icon">✓</span>
+        <div>
+          <strong>Thank you for your response!</strong>
+          <p>Your survey has been submitted successfully.</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-row">
+        <button type="button" id="reset-btn" class="btn-reset">Reset</button>
+        <button type="submit" id="submit-btn" class="btn-submit">Submit Survey</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
