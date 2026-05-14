@@ -1,6 +1,6 @@
 # Survey Form
 
-A responsive survey form built using HTML ,CSS and js
+A responsive survey form built using HTML ,CSS and JavaScript
 This project is part of my web development practice to improve my front-end skills.
 
 ## Live Demo
@@ -11,7 +11,7 @@ https://surveyformwebsite.netlify.app/
 
 * HTML5
 * CSS3
-* js
+* JavaScript
 
 ## Features
 
