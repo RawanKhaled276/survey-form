@@ -5,7 +5,7 @@ This project is part of my web development practice to improve my front-end skil
 
 ## Live Demo
 
-https://surveyformwebsite.netlify.app/
+https://survey-webpage.netlify.app/
 
 ## Technologies Used
 
